@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<span>
+
+
+  <!--CTYPE ht -->
+  <html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1">
+      <link href="https://i1.social.s-msft.com/Forums/RequestReduceContent/dc802f1ca5bd104a0cead68e35fd4af2-6d6d225143f425b5d0819b1ed59fa2dc-RequestReducedStyle.css" rel="Stylesheet" type="text/css" />
+      <link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+      <link href="https://i1.social.s-msft.com/Forums/RequestReduceContent/fdb2a2200b9eeec25b1a74161fded72f-128250c961c993db18ed1c363cf9f8ae-RequestReducedStyle.css" rel="Stylesheet" type="text/css" />
+      <link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+
+
+      <link rel="shortcut icon" href="https://i1.social.s-msft.com/Forums/GlobalResources/images/Msdn/favicon.ico" type="image/x-icon" />
+      <link href="https://i1.social.s-msft.com/Forums/RequestReduceContent/7d822cb990d2068a0d9cf419de3fa0ee-83b411f987533ec152145b51168efc93-RequestReducedStyle.css" rel="Stylesheet" type="text/css" />
+      <meta name="CommunityInfo" content=" B=Msdn;A=Forums;L=zh-CN;" />
+      <meta name="ms.puidhash" content="" />
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js" type="text/javascript" language="javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.2.1.min.js" type="text/javascript" language="javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script src="https://i1.social.s-msft.com/Forums/RequestReduceContent/198faff60a83dd768cacdf60118b0b19-6584225de39c1527dd5dd7bce11792ab-RequestReducedScript.js" type="text/javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <title>
+        Msdn 论坛 - 微软云Azure开发讨论区
+      </title>
+
+      <!--[if IE 6]>
+    <link type="text/css" rel="Stylesheet" href="https://i1.social.s-msft.com/Forums/resources/styles/IE6Core.css?cver=0%0d%0a" />
+    <![endif] -->
+      <script type="text/javascript">
+        //<![CDATA[
+
+        //&lt;![CDATA[
+        var fms_site_culture = 'zh-CN'; var fms_site_lcid = '2052';
+        //]]&gt;
+    
+//]]>//
+      </script>
+
+
+      <script src="https://i1.social.s-msft.com/Forums/RequestReduceContent/a76d83988561a006f2e451af9e0453cf-8fc47c177cbfe9c7889742e6fc41b86c-RequestReducedScript.js" type="text/javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/jquery-ui.js">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script>
+        //<![CDATA[
+
+        if (top.location.href != self.location.href)
+            top.location.href = self.location.href;
+    
+//]]>//
+      </script>
+      <script src="https://i1.social.s-msft.com/Forums/RequestReduceContent/0061c9d23551de429eb6bd497196dc44-6570670e7071ea468f188c832e36a30e-RequestReducedScript.js" type="text/javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+
+      <script type="text/javascript" src="https://i1.social.s-msft.com/Forums/Scripts/prettify.js?cver=0%0d%0a">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script type="text/javascript" src="https://i1.social.s-msft.com/Forums/Scripts/lang-ml.js?cver=0%0d%0a">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script type="text/javascript" src="https://i1.social.s-msft.com/Forums/Scripts/lang-vb.js?cver=0%0d%0a">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script type="text/javascript" src="https://i1.social.s-msft.com/Forums/Scripts/lang-sql.js?cver=0%0d%0a">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script type="text/javascript">
+        //<![CDATA[
+
+    $(document).ready(function () {
+        prettyPrint();
+    });
+
+//]]>//
+      </script>
+
+      <!--
+Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.
+ -->
+
+      <script type="text/javascript" language="javascript">
+        //<![CDATA[
+
+            $(document).ready(function () {
+                window.appInsights = {
+                    queue: [],
+                    start: function (n) {
+                        function r(n, t) {
+                            n[t] = function () {
+                                var i = arguments;
+                                n.queue.push(function () { n[t].apply(n, i); });
+                            };
+                        }
+                        var t, i;
+                        this.applicationInsightsId = n;
+                        this.accountId = null;
+                        this.appUserId = null;
+                        r(this, &quot;logEvent&quot;);
+                        r(this, &quot;logPageView&quot;);
+                        t = document.createElement(&quot;script&quot;);
+                        t.type = &quot;text/javascript&quot;;
+                        t.src = &quot;//az416426.vo.msecnd.net/scripts/ai.js&quot;;
+                        t.async = true;
+                        i = document.getElementsByTagName(&quot;script&quot;)[0];
+                        i.parentNode.insertBefore(t, i);
+                    }
+                };
+                window.appInsights.start(&quot;6e09d518-9cc0-4a60-995f-a3fad357f796&quot;);
+                window.appInsights.logPageView();
+            });
+        
+//]]>//
+      </script>
+    </head>
+    <body class=" zh-cn Forums " dir="ltr">
+
+
+      <div data-chameleon-template="epxheader"></div>
+      <div data-chameleon-template="header">
+
+
+
+
+
+        <input type="hidden" id="isHeaderBleeding" value="true" xmlns="http://www.w3.org/1999/xhtml" />
+        <div id="ux-header" dir="ltr" class="ltr msdn" xmlns="http://www.w3.org/1999/xhtml">
+
+
+          <header>
+            <span id="singleCol"></span>
+            <span id="doubleCol"></span>
+            <span id="isMobile"></span>
+            <div>
+              <div class="row topRow">
+                <div class="top">
+                  <div class="left">
+                    <a class="msdnLogoImg" href="https://msdn.microsoft.com/zh-CN" title="MSDN home">
+                      <div id="msft-logo" class="msft-logo"></div>
+                    </a>
+                    <div class="GrayPipe"></div>
+                    <a class="DevCenterFullNameNonMegaBlade" href="https://msdn.microsoft.com/zh-CN">Developer Network</a>
+                    <a class="DevCenterFullName" href="https://msdn.microsoft.com/zh-CN">Developer Network</a>
+                    <a class="DevCenterShortName" href="https://msdn.microsoft.com/zh-CN">Developer</a>
+                  </div>
+                  <div class="right">
+                    <div id="signIn">
+                      <a class="SignedOutProfileElement createProfileLink" href="" title=""></a>
+                      <span class=":ProfileElement:  profileName"></span>
+
+                      <img class="profileImage" src="https://i-msdn.sec.s-msft.com/Areas/Centers/Themes/StandardDevCenter/Content/Images/profile.jpg?v=635859243906886508" />
+
+
+                      <a class="SignedOutProfileElement createViewProfileLink" href="" title=":CreateViewProfileText:">:CreateViewProfileText:</a>
+                      <a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.msdn.microsoft.com&amp;wreply=https%3a%2f%2fsocial.msdn.microsoft.com%2fForums%2fzh-CN%2fhome%3fforum%3dwindowsazurezhchs%26filter%3dalltypes%26sort%3dlastpostdesc%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft" title="登录">登录</a>
+                    </div>
+
+
+
+
+                    <div class="auxNav">
+                      <div>
+                        <div data-fragmentname="Subscriptions" id="Fragment_Subscriptions" xmlns="http://www.w3.org/1999/xhtml">
+                          <a href="https://msdn.microsoft.com/subscriptions/manage/hh442900" id="Subscriptions_2153_1" xmlns="http://www.w3.org/1999/xhtml">
+                            <span style="line-height:18px;" xmlns="">MSDN 订阅</span>
+                          </a>
+                        </div>
+                        <div data-fragmentname="GetTools" id="Fragment_GetTools" xmlns="http://www.w3.org/1999/xhtml">
+                          <a href="http://go.microsoft.com/fwlink/?LinkId=309297&amp;clcid=0x804&amp;slcid=0x804&amp;campaign=o~msft~msdn~gettools-header~dn308572" id="GetTools_2153_3" xmlns="http://www.w3.org/1999/xhtml">
+                            <span style="line-height:18px;" xmlns="">获取工具</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row middleRow">
+                <div class="expandTop">
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+              </div>
+            </div>
+            <div id="buttomRowWrapper" class="bg_default">
+              <div class="row buttomRow bg_default">
+                <div class="bottom">
+                  <div class="left">
+                    <a id="grip" class="menu-icon" href="javascript:void(0)"></a>
+
+                    <div id="drawer">
+                      <div class="toc">
+
+                        <nav>
+                          <ul class="navL1">
+                            <li class="inactive toggle">
+                              <a href="javascript:void(0)" title="技术">技术</a>
+                              <ul class="navL2">
+                                <li class="inactive">
+                                  <a href="https://msdn.microsoft.com/cloud-app-development-msdn" title="云">云</a>
+
+
+                                </li>
+                                <li class="inactive">
+                                  <a href="https://msdn.microsoft.com/app-development-msdn" title="应用开发">应用开发</a>
+
+
+                                </li>
+                                <li class="inactive">
+                                  <a href="https://msdn.microsoft.com/web-app-development-msdn" title="Web">Web</a>
+
+
+                                </li>
+                                <li class="inactive">
+                                  <a href="https://msdn.microsoft.com/big-data-development-msdn" title="数据">数据</a>
+
+
+                                </li>
+                                <li class="inactive">
+                                  <a href="https://msdn.microsoft.com/games-development-msdn" title="游戏">游戏</a>
+
+
+                                </li>
+                                <li class="inactive">
+                                  <a href="https://msdn.microsoft.com/internetofthings" title="物联网">物联网</a>
+
+
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="inactive toggle">
+                              <a href="javascript:void(0)" title="下载">下载</a>
+                              <ul class="navL2">
+                                <li class="inactive">
+                                  <a href="https://www.visualstudio.com/downloads/download-visual-studio-vs" title="Visual Studio">Visual Studio</a>
+
+
+                                </li>
+                                <li class="inactive">
+                                  <a href="https://msdn.microsoft.com/subscriptions/" title="MSDN 订阅访问">MSDN 订阅访问</a>
+
+
+                                </li>
+                                <li class="inactive">
+                                  <a href="https://msdn.microsoft.com/microsoft-sdks-msdn" title="SDK">SDK</a>
+
+
+                                </li>
+                                <li class="inactive toggle">
+                                  <a href="javascript:void(0)" title="试用软件">试用软件</a>
+
+                                  <ul class="navL3">
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/evalcenter" title="免费下载">免费下载</a>
+                                    </li>
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/officeevaluationresources" title="Office 资源">Office 资源</a>
+                                    </li>
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/sharepoint2013resources" title="SharePoint Server 2013 资源">SharePoint Server 2013 资源</a>
+                                    </li>
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/sqlserver2014expressresources" title="SQL Server 2014 Express 资源">SQL Server 2014 Express 资源</a>
+                                    </li>
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/windowsserver2012r2resources" title="Windows Server 2012 资源">Windows Server 2012 资源</a>
+                                    </li>
+                                  </ul>
+
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="inactive toggle">
+                              <a href="javascript:void(0)" title="计划">计划</a>
+                              <ul class="navL2">
+                                <li class="inactive toggle">
+                                  <a href="javascript:void(0)" title="MSDN 订阅">MSDN 订阅</a>
+
+                                  <ul class="navL3">
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/msdn-subscriptions-overview" title="概述">概述</a>
+                                    </li>
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/benefits-overview" title="权益">权益</a>
+                                    </li>
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/msdn-subscriptions-administration" title="Administrators">Administrators</a>
+                                    </li>
+                                  </ul>
+
+                                </li>
+                                <li class="inactive toggle">
+                                  <a href="javascript:void(0)" title="学生">学生</a>
+
+                                  <ul class="navL3">
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/imagine/imagine-home" title="Microsoft Imagine">Microsoft Imagine</a>
+                                    </li>
+                                    <li class="inactive">
+                                      <a href="https://msdn.microsoft.com/microsoftstudentpartners" title="Microsoft 学生合作伙伴">Microsoft 学生合作伙伴</a>
+                                    </li>
+                                  </ul>
+
+                                </li>
+                                <li class="inactive toggle">
+                               ... class="isLoading" /></div>
+                    </div>
+                  </div>
+                  </li>
+
+                  <li>
+                    <div class="pager smallwriting">
+
+
+                      <span class="itemSpan">項目 1 到 20 的 872</span>
+
+                      <a href="https://social.msdn.microsoft.com/Forums/zh-CN/home?forum=windowsazurezhchs&amp;filter=alltypes&amp;sort=lastpostdesc&amp;brandIgnore=true&amp;page=2" rel="next noindex" id="threadPager_Next" data-clientrefresh="true" data-refreshcontent="Search" data-callback="ScrollWindowToTop">下一個 ›</a>
+                    </div>
+                  </li>
+                  </ul>
+
+                </div>
+              </div>
+              <div id="searchAnnouncmentContainer">
+
+                <div id="announcementsContainer">
+                  <div id="noAnnouncementsTextBox">
+                    <span id="seeAnnouncementsText">无公告</span>
+                  </div>
+
+
+                  <div class="announcement popup">
+
+
+
+                  </div>
+                </div>
+              </div>
+              <script>
+                //<![CDATA[
+
+            $(function () {
+                Forums.Homepage.wireSearchResultEvents();
+                Forums.Homepage.logSerp();
+            });
+        
+//]]>//
+              </script>
+
+
+
+            </div>
+          </div>
+      </div>
+      <input type="hidden" name="IsTrusted" id="trustedU" value="False" />
+      <input type="hidden" name="IsTrustedCheckEnabled" id="isTrustedCheckEnabled" value="True" />
+      <input type="hidden" name="isSpamCheckEnabled" id="isSpamCheckEnabled" value="True" />
+      </div>
+
+      <div class="clear"></div>
+      </div>
+      </div>
+      <div id="nrSurvey">
+
+        <script type="text/javascript">
+          //<![CDATA[
+
+    if (!$.Microsoft) $.Microsoft = {};
+    if (!$.Microsoft.Mtps) $.Microsoft.Mtps = {};
+    if (!$.Microsoft.Mtps.NetReflectorInit)
+        $.Microsoft.Mtps.NetReflectorInit = {
+            surveyUrl: 'http://support.microsoft.com/common/survey.aspx?scid=sw%3bzh-hans%3b3763&amp;altstyle=narrow&amp;renderoption=overridedefault&amp;url=http://social.msdn.microsoft.com/Forums/zh-CN/home?forum=windowsazurezhchs\u0026filter=alltypes\u0026sort=lastpostdesc&amp;P0=f05891b3-60a0-4243-8647-b858be0867e7',
+            throttleRate: &quot;3.00&quot;,
+            privacyStatementText: &quot;隐私声明&quot;,
+            trackerWindowText: &quot;&lt;p&gt;请不要关闭此窗口。&lt;/p&gt;&lt;p&gt;谢谢！完成访问时，调查将显示在此处，所以&lt;b&gt;请不要关闭此窗口&lt;/b&gt;。&lt;/P&gt;&quot;,
+            logoUrl: 'https://www.microsoft.com/library/svy/sto/msdn-logo-stripe.gif',
+            closeButtonUrl: 'https://www.microsoft.com/library/svy/sto/msdn-close.gif',
+            topBarUrl: 'https://www.microsoft.com/library/svy/sto/top-stripe.gif',
+            bottomBarUrl: 'https://www.microsoft.com/library/svy/sto/bottom-stripe.gif',
+            blankPage: 'https://social.msdn.microsoft.com/forums/blank.htm',
+            showSurveyToComscoreUser: 'no'
+        };
+
+//]]>//
+        </script>
+        <link href="https://i1.social.s-msft.com/Forums/resources/NetReflector/NetReflector.css?cver=0%0d%0a" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+          //<![CDATA[
+
+
+    setTimeout(&quot;Forums.loadScript('https://i1.social.s-msft.com/Forums/resources/NetReflector/NetReflector.js?cver=0%0d%0a')&quot;, 1000);
+
+//]]>//
+        </script>
+        <div id="divNRMain" style="position: fixed; display: none; background-color: White;
+    z-index: 1001;">
+          <table width="360" cellpadding="3" cellspacing="0" border="0" bgcolor="#FFFFFF">
+            <tr>
+              <td style="padding: 3px;">
+                <table width="100%" cellpadding="1" cellspacing="0" border="0" bgcolor="#999999">
+                  <tr>
+                    <td style="padding: 1px;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+                        <tr valign="top">
+                          <td>
+                            <img src="https://www.microsoft.com/library/svy/sto/msdn-logo-stripe.gif" />
+                            <img id="imgNRClose" border="0" src="https://www.microsoft.com/library/svy/sto/msdn-close.gif" />
+                            <br />
+                            <img src="https://www.microsoft.com/library/svy/sto/top-stripe.gif" />
+                            <table width="100%" cellpadding="5" cellspacing="0">
+                              <tr>
+                                <td style="padding: 2px">
+                                  <div>
+                                    <p>Microsoft 正在进行一项网上调查，以了解您对 Msdn 网站的意见。如果您选择参加，我们将会在您离开 Msdn 网站时向您显示该网上调查。</p>
+                                    <p>是否要参加？</p>
+                                  </div>
+                                  <div align="center">
+                                    <input id="btnNRYes" type="button" value="  是  " />&amp;nbsp;&amp;nbsp;
+                                    <input id="btnNRNo" type="button" value=" 否 " />
+                                  </div>
+                                  <div>
+                                    <a href="http://privacy.microsoft.com/en-us/default.mspx" target="_blank">
+                                      隐私声明
+                                    </a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <img src="https://www.microsoft.com/library/svy/sto/bottom-stripe.gif" />
+                            <input type="hidden" id="hdnSurveyUrl" value="http://support.microsoft.com/common/survey.aspx?scid=sw%3bzh-hans%3b3763&amp;altstyle=narrow&amp;renderoption=overridedefault&amp;url=http://social.msdn.microsoft.com/Forums/zh-CN/home?forum=windowsazurezhchs\u0026filter=alltypes\u0026sort=lastpostdesc&amp;P0=f05891b3-60a0-4243-8647-b858be0867e7" />
+                            <input type="hidden" id="hdnLogoUrl" value="https://www.microsoft.com/library/svy/sto/msdn-logo-stripe.gif" />
+                            <input type="hidden" id="hdnTopStripUrl" value="https://www.microsoft.com/library/svy/sto/top-stripe.gif" />
+                            <input type="hidden" id="hdnBtmStripUrl" value="https://www.microsoft.com/library/svy/sto/bottom-stripe.gif" />
+                            <input type="hidden" id="hdnTrackerText" value="&lt;p&gt;请不要关闭此窗口。&lt;/p&gt;&lt;p&gt;谢谢！完成访问时，调查将显示在此处，所以&lt;b&gt;请不要关闭此窗口&lt;/b&gt;。&lt;/P&gt;" />
+                            <input type="hidden" id="hdnPrivacyText" value="隐私声明" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="Clear"></div>
+      </div>
+
+      </div>
+      </div>
+      </div>
+
+      <div class="Clearbottom"></div>
+      <div class="bottomleftcorner"></div>
+      <div class="bottomrightcorner"></div>
+
+
+
+
+
+      </div>
+      </div>
+      </div>
+      </div>
+
+
+      <div data-chameleon-template="epxfooter"></div>
+      <div data-chameleon-template="footer">
+
+
+
+
+
+        <div id="ux-footer" class="" style="" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+          <footer class="top">
+            <div data-fragmentname="LeftLinks" id="Fragment_LeftLinks" xmlns="http://www.w3.org/1999/xhtml">
+
+              <div class="linkList">
+                <div class="linkListTitle">开发人员中心</div>
+                <ul class="links">
+                  <li>
+                    <a href="https://dev.windows.com" id="LeftLinks_2148_1" class="windowsBlue" xmlns="http://www.w3.org/1999/xhtml">Windows</a>
+                  </li>
+                  <li>
+                    <a href="http://dev.office.com" id="LeftLinks_2148_3" class="office" xmlns="http://www.w3.org/1999/xhtml">Office</a>
+                  </li>
+                  <li>
+                    <a href="https://msdn.microsoft.com/vstudio" id="LeftLinks_2148_4" class="visualStudio" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+                  </li>
+                  <li>
+                    <a href="http://azure.microsoft.com/zh-cn/documentation/" target="_blank" id="LeftLinks_2148_12" xmlns="http://www.w3.org/1999/xhtml">Microsoft Azure</a>
+                  </li>
+                  <li>
+                    <a href="https://msdn.microsoft.com/developer-centers-msdn" id="LeftLinks_2148_5" xmlns="http://www.w3.org/1999/xhtml">更多...</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="rightLinks">
+              <div data-fragmentname="CenterLinks1" id="Fragment_CenterLinks1" xmlns="http://www.w3.org/1999/xhtml">
+
+                <div class="linkList">
+                  <div class="linkListTitle">学习资源</div>
+                  <ul class="links">
+                    <li>
+                      <a href="http://www.microsoftvirtualacademy.com/" id="CenterLinks1_2151_4" xmlns="http://www.w3.org/1999/xhtml">Microsoft 虚拟学院</a>
+                    </li>
+                    <li>
+                      <a href="http://channel9.msdn.com/" id="CenterLinks1_2151_5" xmlns="http://www.w3.org/1999/xhtml">第 9 频道</a>
+                    </li>
+                    <li>
+                      <a href="http://www.interoperabilitybridges.com/" id="CenterLinks1_2151_6" xmlns="http://www.w3.org/1999/xhtml">互操作性桥梁</a>
+                    </li>
+                    <li>
+                      <a href="https://msdn.microsoft.com/magazine/" id="CenterLinks1_2151_7" xmlns="http://www.w3.org/1999/xhtml">MSDN 杂志</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-fragmentname="CenterLinks2" id="Fragment_CenterLinks2" xmlns="http://www.w3.org/1999/xhtml">
+
+                <div class="linkList">
+                  <div class="linkListTitle">社区</div>
+                  <ul class="links">
+                    <li>
+                      <a href="https://social.msdn.microsoft.com/forums/zh-cn/home" id="CenterLinks2_2151_8" xmlns="http://www.w3.org/1999/xhtml">论坛</a>
+                    </li>
+                    <li>
+                      <a href="http://blogs.msdn.com/b/developer-tools/" id="CenterLinks2_2151_9" xmlns="http://www.w3.org/1999/xhtml">博客</a>
+                    </li>
+                    <li>
+                      <a href="http://www.codeplex.com" id="CenterLinks2_2151_10" xmlns="http://www.w3.org/1999/xhtml">Codeplex</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-fragmentname="CenterLinks3" id="Fragment_CenterLinks3" xmlns="http://www.w3.org/1999/xhtml">
+
+                <div class="linkList">
+                  <div class="linkListTitle">支持</div>
+                  <ul class="links">
+                    <li>
+                      <a href="https://msdn.microsoft.com/hh361695" id="CenterLinks3_2151_11" xmlns="http://www.w3.org/1999/xhtml">自助支持</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-fragmentname="CenterLinks4" id="Fragment_CenterLinks4" xmlns="http://www.w3.org/1999/xhtml">
+
+                <div class="linkList">
+                  <div class="linkListTitle">计划</div>
+                  <ul class="links">
+                    <li>
+                      <a href="https://www.microsoft.com/bizspark/" id="CenterLinks4_2151_13" xmlns="http://www.w3.org/1999/xhtml">BizSpark（针对新创企业）</a>
+                    </li>
+                    <li>
+                      <a href="https://www.dreamspark.com/" id="CenterLinks4_2151_14" xmlns="http://www.w3.org/1999/xhtml">DreamSpark</a>
+                    </li>
+                    <li>
+                      <a href="http://www.imaginecup.com" id="CenterLinks4_2151_17" xmlns="http://www.w3.org/1999/xhtml">创新杯</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+          <footer class="bottom">
+            <span class="localeContainer">
+
+              <form class="selectLocale" id="selectLocaleForm" action="https://msdn.microsoft.com/zh-CN/selectlocale-dmc" />
+              <input type="hidden" name="fromPage" value="http%3a%2f%2fsocial.msdn.microsoft.com%2fForums%2fzh-CN%2fhome%3fforum%3dwindowsazurezhchs%26filter%3dalltypes%26sort%3dlastpostdesc" />
+              <a href="#" onclick="$('#selectLocaleForm').submit();return false;" title="更改您的语言">中国 (简体中文)</a>
+              &lt;/form&gt;
+
+
+            </span>
+
+            <div data-fragmentname="BottomLinks" id="Fragment_BottomLinks" xmlns="http://www.w3.org/1999/xhtml">
+
+              <div class="linkList">
+                <ul class="links horizontal">
+                  <li>
+                    <a href="https://msdn.microsoft.com/newsletter.aspx" id="BottomLinks_2148_7" xmlns="http://www.w3.org/1999/xhtml">新闻稿</a>
+                  </li>
+                  <li>
+                    <a href="https://msdn.microsoft.com/dn529288" id="BottomLinks_2148_8" xmlns="http://www.w3.org/1999/xhtml">隐私&amp; Cookie</a>
+                  </li>
+                  <li>
+                    <a href="https://msdn.microsoft.com/cc300389" id="BottomLinks_2148_9" xmlns="http://www.w3.org/1999/xhtml">使用条款</a>
+                  </li>
+                  <li>
+                    <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" id="BottomLinks_2148_10" xmlns="http://www.w3.org/1999/xhtml">商标</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span class="logoLegal">
+              <span class="logo"></span>
+              <span class="copyright">© 2015 Microsoft</span>
+            </span>
+          </footer>
+        </div>
+
+        <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+          //<![CDATA[
+
+/*&lt;![CDATA[*/
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	&quot;image&quot;: &quot;https://i-msdn.sec.s-msft.com&quot;, 
+	&quot;js&quot;: &quot;https://i2-msdn.sec.s-msft.com&quot;, 
+	&quot;css&quot;: &quot;https://i-msdn.sec.s-msft.com&quot;, 
+	&quot;xap&quot;: &quot;https://msdn.microsoft.com&quot;
+});
+/**/
+/*]]&gt;*/
+
+//]]>//
+        </script>
+        <script src="https://i1.social.s-msft.com/Forums/RequestReduceContent/8aad8a96d5837014e7d7eee4107f9253-e7b2564c235754707b021e955545e972-RequestReducedScript.js" type="text/javascript">
+          //<![CDATA[
+
+//]]>//
+        </script>
+      </div>
+      <div data-chameleon-template="megablade"></div>
+
+
+
+
+      <script src="https://i1.social.s-msft.com/Forums/resources/scripts/core.js?cver=0%0d%0a" type="text/javascript" language="javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script type="text/javascript" src="https://i1.social.s-msft.com/Forums/resources/scripts/jquery-impromptu.3.1.min.js?cver=0%0d%0a">
+        //<![CDATA[
+
+//]]>//
+      </script>
+
+      <script src="https://i1.social.s-msft.com/Forums/resources/scripts/homeclientrefresh.js?cver=0%0d%0a" type="text/javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script src="https://i1.social.s-msft.com/Forums/resources/scripts/forumdetails.js?cver=0%0d%0a" type="text/javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script>
+        //<![CDATA[
+
+        var pageData = {&quot;url&quot;:null,&quot;date&quot;:null,&quot;interval&quot;:0,&quot;enabled&quot;:false,&quot;validUser&quot;:false,&quot;autoSubscribe&quot;:false};
+        var userEmailConfigured = false;
+        $(function () {
+            Forums.Homepage.wirePageElements('搜索类别和论坛', '搜索论坛问题');
+        });
+    
+//]]>//
+      </script>
+
+
+      <script src="https://i1.social.s-msft.com/Forums/resources/scripts/webtrends.js?cver=0%0d%0a" type="text/javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <noscript>
+        <img alt="" border="0" id="DCSIMG" width="1" height="1" src="http://m.webtrends.com/dcsour5e80000008ybade4ttg_1i1l/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" />
+      </noscript>
+
+
+
+      <script src="https://widgets.membership.s-msft.com/v1/loader.js?brand=Msdn&amp;lang=zh-CN" type="text/javascript" language="javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+
+
+
+      <script src="https://i1.social.s-msft.com/Forums/GlobalResources/scripts/common.js?cver=0%0d%0a" type="text/javascript" language="javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script src="https://i1.social.s-msft.com/Forums/GlobalResources/scripts/localepop.js?cver=0%0d%0a" type="text/javascript" language="javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+
+      <script src="https://i1.social.s-msft.com/Forums/GlobalResources/scripts/omni_rsid_social.js?cver=0%0d%0a" type="text/javascript" language="javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <script src="https://i1.social.s-msft.com/Forums/GlobalResources/scripts/WEDCS.js?cver=0%0d%0a" type="text/javascript" language="javascript">
+        //<![CDATA[
+
+//]]>//
+      </script>
+      <noscript>
+        <a href="https://www.omniture.com" title="Web Analytics">
+          <img src="https://msstonojssocial.112.2O7.net/b/ss/msstonojssocial/1/H.20.2--NS/0" height="1" width="1" alt="" />
+        </a>
+      </noscript>
+
+    </body>
+  </html>
+</span>
