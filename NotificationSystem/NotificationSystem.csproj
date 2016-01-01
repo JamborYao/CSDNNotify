@@ -65,6 +65,7 @@
     <Compile Include="Model\Thread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Library\HtmlAgilityPack.dll" />
     <Content Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -72,7 +73,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Library\HtmlAgilityPack.dll" />
     <Content Include="log.txt" />
     <Content Include="Response.xml" />
     <Content Include="temp.html" />
