@@ -57,8 +57,8 @@ namespace NotificationSystem.Common
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
             }
-            catch {
-
+            catch(Exception e) {
+                LogHelper.LogMessage(e.Message);
             }
         }
     }

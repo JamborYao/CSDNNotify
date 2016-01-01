@@ -59,11 +59,13 @@
     <Compile Include="Common\EmailHelper.cs" />
     <Compile Include="Common\Forum.cs" />
     <Compile Include="Common\HistoryThread.cs" />
+    <Compile Include="Common\LogHelper.cs" />
     <Compile Include="Common\TxtHelper.cs" />
     <Compile Include="Interface\ITxt.cs" />
     <Compile Include="Model\Thread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Library\HtmlAgilityPack.dll" />
+    <Content Include="log.txt" />
     <Content Include="Response.xml" />
     <Content Include="temp.html" />
   </ItemGroup>

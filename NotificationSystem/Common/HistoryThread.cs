@@ -67,7 +67,7 @@ namespace NotificationSystem.Common
             }
             catch (Exception e)
             {
-
+                LogHelper.LogMessage(e.Message);
             }
         }
 
@@ -92,7 +92,7 @@ namespace NotificationSystem.Common
             }
             catch (Exception e)
             {
-
+                LogHelper.LogMessage(e.Message);
             }
 
 
