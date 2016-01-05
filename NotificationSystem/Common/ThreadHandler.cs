@@ -68,8 +68,12 @@ namespace NotificationSystem.Common
                             
                         }
                     }
-                    notifyItem[item.FirstOrDefault().Key] = notifyItemList;
-                    NotifiyData.Add(notifyItem);
+                    if (notifyItemList.Count > 0)
+                    {
+                        notifyItem[item.FirstOrDefault().Key] = notifyItemList;
+                        NotifiyData.Add(notifyItem);
+                    }
+                   
                 }
             }
             catch (Exception e)
