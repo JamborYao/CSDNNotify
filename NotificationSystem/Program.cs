@@ -6,6 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using NotificationSystem.Common;
 using NotificationSystem.Model;
+using HtmlAgilityPack;
+using System.Net;
+using System.IO;
+using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
 
 namespace NotificationSystem
 {
@@ -14,21 +19,48 @@ namespace NotificationSystem
         static void Main(string[] args)
         {
 
-            HistoryThread handler = new HistoryThread();
-            if (handler.Notify.Count == 0) return;
-            SendEmail(handler.Notify);
-
-
+            ThreadHandler handler = new ThreadHandler();
+            if (handler.NotifiyData.Count == 0) return;
+            SendEmail(handler.NotifiyData);
         }
 
-        public static void SendEmail(List<Thread> threads)
+
+
+        public static void SendEmail(List<Dictionary<string, List<Thread>>> threads)
         {
-            List<string> emailTos = new List<string>();
-           
+
             string content = "";
             foreach (var item in threads)
             {
-                content += item.ThreadLink + "</br>";
+                switch (item.FirstOrDefault().Key)
+                {
+                    case "CSDNUrlAsk":
+                        if (item.FirstOrDefault().Value.Count <= 0) break;
+                        content += "New CSDN thread coming from CSDN ASK forum:<br>";
+                        foreach (var thread in item.FirstOrDefault().Value)
+                        {
+                            content += thread.ThreadLink + "<br>";
+                        }
+
+                        break;
+                    case "CSDNZone":
+                        if (item.FirstOrDefault().Value.Count <= 0) break;
+                        content += "New CSDN thread coming from CSDN Zone forum:<br>";                       
+                        foreach (var thread in item.FirstOrDefault().Value)
+                        {
+                            content += thread.ThreadLink + "<br>";
+                        }
+                        break;
+                    case "MSDNUrl":
+                        if (item.FirstOrDefault().Value.Count <= 0) break;
+                        content += "New MSDN thread coming:<br>";                       
+                        foreach (var thread in item.FirstOrDefault().Value)
+                        {
+                            content += thread.ThreadLink + "<br>";
+                        }
+                        break;
+                }
+                //content += item.ThreadLink + "</br>";
             }
             EmailHelper emailHelper = new EmailHelper("Forum New Thread Coming", content);
 
@@ -37,4 +69,5 @@ namespace NotificationSystem
         }
 
     }
+
 }

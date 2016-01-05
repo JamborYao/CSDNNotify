@@ -15,7 +15,7 @@ namespace NotificationSystem.Model
 
         public string ThreadLink;
 
-        public int LinePosition;
+        public int Line;
     }
     [Serializable]
     public class Threads
