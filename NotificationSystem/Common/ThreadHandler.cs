@@ -18,35 +18,57 @@ namespace NotificationSystem.Common
         public string MSDNUrl = System.Web.HttpUtility.UrlDecode(ConfigurationManager.AppSettings["MSDNUrl"].ToString());
         public string CSDNUrlAsk = System.Web.HttpUtility.UrlDecode(ConfigurationManager.AppSettings["CSDNUrlAsk"].ToString());
         public string CSDNZone = System.Web.HttpUtility.UrlDecode(ConfigurationManager.AppSettings["CSDNZone"].ToString());
+        public string ForumDataTempFile = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["ForumDataTemp"].ToString();
+        public string WspDataTempFile = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["WspDataTemp"].ToString();
+
+
+
         public string ResponseBody { get; set; }
 
         TxtHelper txtHelper = new TxtHelper();
         public List<Dictionary<string, List<Thread>>> writeTxtData = new List<Dictionary<string, List<Thread>>>();
+        public List<Dictionary<string, List<Thread>>> writeTxtDataWsp = new List<Dictionary<string, List<Thread>>>();
         public List<Thread> Notify = new List<Thread>();
         public List<Dictionary<string, List<Thread>>> NotifiyData = new List<Dictionary<string, List<Thread>>>();
+        public List<Dictionary<string, List<Thread>>> NotifiyDataWsp = new List<Dictionary<string, List<Thread>>>();
 
         public ThreadHandler()
         {
             GetThreadsFromCSDNUrlAskUrl(CSDNUrlAsk, Forum.CSDNUrlAsk, 0);
             GetThreadsFromCSDNUrlAskUrl(CSDNZone, Forum.CSDNZone, 1);
             GetThreadsFromMSDN(Forum.MSDNUrl, 2);
-            List<Dictionary<string, List<Thread>>> oldData = txtHelper.GetFromTxt();
+            List<Dictionary<string, List<Thread>>> oldData = txtHelper.GetFromTxt(ForumDataTempFile);
+            List<Dictionary<string, List<Thread>>> oldDataWsp = txtHelper.GetFromTxt(WspDataTempFile);
 
-            CompareData(writeTxtData, oldData);
+            CompareData(writeTxtData, oldData, 0);
+            CompareData(writeTxtDataWsp, oldDataWsp, 1);
 
             if (NotifiyData.Count != 0)
             {
-
-                txtHelper.SaveToTxt(writeTxtData);
+                txtHelper.SaveToTxt(writeTxtData, ForumDataTempFile);
+            }
+            if (NotifiyDataWsp.Count != 0)
+            {
+                txtHelper.SaveToTxt(writeTxtDataWsp, WspDataTempFile);
             }
         }
 
-        public void CompareData(List<Dictionary<string, List<Thread>>> newData, List<Dictionary<string, List<Thread>>> oldData)
+        public void CompareData(List<Dictionary<string, List<Thread>>> newData, List<Dictionary<string, List<Thread>>> oldData, int flag)
         {
-           
+
             try
             {
-                if (oldData == null) { txtHelper.SaveToTxt(writeTxtData); return; };
+                if (oldData == null) {
+                    if (flag == 0)
+                    {
+                        txtHelper.SaveToTxt(writeTxtData, ForumDataTempFile);
+                    }
+                    if (flag == 1)
+                    {
+                        txtHelper.SaveToTxt(writeTxtDataWsp, WspDataTempFile);
+                    }
+                    return;
+                };
                 foreach (var item in newData)
                 {
                     Dictionary<string, List<Thread>> notifyItem = new Dictionary<string, List<Thread>>();
@@ -65,15 +87,22 @@ namespace NotificationSystem.Common
                         else
                         {
                             notifyItemList.Add(i);
-                            
+
                         }
                     }
                     if (notifyItemList.Count > 0)
                     {
                         notifyItem[item.FirstOrDefault().Key] = notifyItemList;
-                        NotifiyData.Add(notifyItem);
+                        if (flag == 0)
+                        {
+                            NotifiyData.Add(notifyItem);
+                        }
+                        if (flag == 1)
+                        {
+                            NotifiyDataWsp.Add(notifyItem);
+                        }
                     }
-                   
+
                 }
             }
             catch (Exception e)
@@ -84,8 +113,28 @@ namespace NotificationSystem.Common
         public void GetThreadsFromMSDN(Forum root, int priority)
         {
             List<Thread> threads = new List<Thread>();
-            string html = MSDNHelper.GetThreadBlockHTML();
-            threads = ConverToXMLFromHtml(html, Forum.MSDNUrl);
+            string msdnHtml = "", wspHtml = "", wspSupportHtml = "", wfHtml = "";
+            MSDNHelper.GetThreadBlockHTML(ref msdnHtml, ref wspHtml, ref wspSupportHtml, ref wfHtml);
+            threads = ConverToXMLFromHtml(msdnHtml, Forum.MSDNUrl);
+
+            List<Thread> wspThreads = new List<Thread>();
+            wspThreads = ConverToXMLFromHtml(wspHtml, Forum.MSDNUrl);
+            List<Thread> wspSupportThreads = new List<Thread>();
+            wspSupportThreads = ConverToXMLFromHtml(wspSupportHtml, Forum.MSDNUrl);
+            List<Thread> wfThreads = new List<Thread>();
+            wfThreads = ConverToXMLFromHtml(wfHtml, Forum.MSDNUrl);
+
+            Dictionary<string, List<Thread>> wspList = new Dictionary<string, List<Thread>>();
+            wspList["wsp"] = wspThreads;
+            writeTxtDataWsp.Add(wspList);
+            Dictionary<string, List<Thread>> wspsupportList = new Dictionary<string, List<Thread>>();
+            wspsupportList["wspSupport"] = wspSupportThreads;
+            writeTxtDataWsp.Add(wspsupportList);
+            Dictionary<string, List<Thread>> wfList = new Dictionary<string, List<Thread>>();
+            wfList["wf"] = wfThreads;
+            writeTxtDataWsp.Add(wfList);
+
+
             Dictionary<string, List<Thread>> list = new Dictionary<string, List<Thread>>();
             list[root.ToString()] = threads;
             writeTxtData.Add(list);

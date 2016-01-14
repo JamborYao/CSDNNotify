@@ -13,6 +13,12 @@ namespace NotificationSystem.Common
         public string appEmailFrom = ConfigurationManager.AppSettings["EmailFrom"].ToString();
         public string appEmailTos = ConfigurationManager.AppSettings["EmailTos"].ToString();
         public string appEmailCC = ConfigurationManager.AppSettings["EmailCC"].ToString();
+        public string WspappEmailFrom = ConfigurationManager.AppSettings["WspEmailFrom"].ToString();
+        public string WspappEmailTos = ConfigurationManager.AppSettings["WspEmailTos"].ToString();
+       
+        public string WspappEmailCC = ConfigurationManager.AppSettings["WspEmailCC"].ToString();
+        public string WfappEmailTos = ConfigurationManager.AppSettings["WfEmailTos"].ToString();
+        public string WfappEmailCC = ConfigurationManager.AppSettings["WfEmailCC"].ToString();
         string EmailFrom;
         List<String> EmailTos=new List<string>();
         string Subject;
@@ -58,6 +64,40 @@ namespace NotificationSystem.Common
                 SmtpServer.Send(mail);
             }
             catch(Exception e) {
+                LogHelper.LogMessage(e.Message);
+            }
+        }
+        public void SendEmailCustom(string tostring,string CCstring)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient(this.SmtpServer);
+                if (this.EmailTos == null) return;
+                mail.From = new MailAddress(appEmailFrom);
+                string[] tos = tostring.Split(',');
+                string[] CCs = CCstring.Split(',');
+                for (int i = 0; i < tos.Length; i++)
+                {
+                    mail.To.Add(tos[i]);
+                }
+                for (int i = 0; i < CCs.Length; i++)
+                {
+                    mail.CC.Add(CCs[i]);
+                }
+                mail.Subject = this.Subject;
+                mail.IsBodyHtml = true;
+                mail.Body = this.Content;
+                //Attachment attachment = new Attachment(filename);
+                //mail.Attachments.Add(attachment);
+                //SmtpServer.Port = 25;
+                SmtpServer.Credentials = new System.Net.NetworkCredential(this.EmailFrom, this.EmailFromPwd);
+                //SmtpServer.UseDefaultCredentials = true;
+                SmtpServer.EnableSsl = true;
+                SmtpServer.Send(mail);
+            }
+            catch (Exception e)
+            {
                 LogHelper.LogMessage(e.Message);
             }
         }

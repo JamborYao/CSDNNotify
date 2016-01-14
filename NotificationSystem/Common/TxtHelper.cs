@@ -15,13 +15,13 @@ namespace NotificationSystem.Common
     public class TxtHelper : ITxt
     {
         public string ForumDataTemp = ConfigurationManager.AppSettings["ForumDataTemp"].ToString();
-      
+        public string WspDataTemp = ConfigurationManager.AppSettings["WspDataTemp"].ToString();
 
-        public void SaveToTxt(List<Dictionary<string, List<Thread>>> writeData)
+        public void SaveToTxt(List<Dictionary<string, List<Thread>>> writeData,string filepath)
         {
             string jsonThreads = Newtonsoft.Json.JsonConvert.SerializeObject(writeData);
             byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jsonThreads);
-            string filepath = System.Environment.CurrentDirectory + "\\" + ForumDataTemp;
+            //string filepath = AppDomain.CurrentDomain.BaseDirectory  + "\\" + ForumDataTemp;
             if (File.Exists(filepath))
             {
                 File.Delete(filepath);
@@ -33,14 +33,14 @@ namespace NotificationSystem.Common
 
         }
 
-        public List<Dictionary<string, List<Thread>>> GetFromTxt()
+        public List<Dictionary<string, List<Thread>>> GetFromTxt(string filepath)
         {
             List<Dictionary<string, List<Thread>>> oldData = new List<Dictionary<string, List<Thread>>>();
-            string filename = Environment.CurrentDirectory + "\\" + ForumDataTemp;
+           // string filename = Environment.CurrentDirectory + "\\" + ForumDataTemp;
             try
             {      
-                if (!File.Exists(filename)) return null;
-                using (FileStream stream = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.None))
+                if (!File.Exists(filepath)) return null;
+                using (FileStream stream = File.Open(filepath, FileMode.Open, FileAccess.Read, FileShare.None))
                 {
                     StreamReader reader = new StreamReader(stream);
                     string content = reader.ReadToEnd();
@@ -48,7 +48,7 @@ namespace NotificationSystem.Common
                 }
             }
             catch {
-                File.Delete(filename);
+                File.Delete(filepath);
             }
             return oldData;
         }

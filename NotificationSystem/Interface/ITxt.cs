@@ -10,7 +10,7 @@ namespace NotificationSystem.Interface
 {
     interface ITxt
     {
-        void SaveToTxt(List<Dictionary<string, List<Thread>>> writeData);
-        List<Dictionary<string, List<Thread>>> GetFromTxt();
+        void SaveToTxt(List<Dictionary<string, List<Thread>>> writeData,string filepath);
+        List<Dictionary<string, List<Thread>>> GetFromTxt(string filepath);
     }
 }
