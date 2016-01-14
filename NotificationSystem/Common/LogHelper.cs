@@ -12,7 +12,7 @@ namespace NotificationSystem.Common
        
         public static void LogMessage(string message)
         { 
-            string filename = Environment.CurrentDirectory + "\\log.txt";
+            string filename = AppDomain.CurrentDomain.BaseDirectory + "log.txt";
             using (FileStream stream = File.Open(filename, FileMode.Append, FileAccess.Write, FileShare.None))   
             {
                 byte[] bytes = System.Text.Encoding.UTF8.GetBytes(message);     
