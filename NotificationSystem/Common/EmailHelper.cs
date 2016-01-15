@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NotificationSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -10,91 +11,59 @@ namespace NotificationSystem.Common
 {
     public class EmailHelper
     {
-        public string appEmailFrom = ConfigurationManager.AppSettings["EmailFrom"].ToString();
-        public string appEmailTos = ConfigurationManager.AppSettings["EmailTos"].ToString();
-        public string appEmailCC = ConfigurationManager.AppSettings["EmailCC"].ToString();
-        public string WspappEmailFrom = ConfigurationManager.AppSettings["WspEmailFrom"].ToString();
-        public string WspappEmailTos = ConfigurationManager.AppSettings["WspEmailTos"].ToString();
-       
-        public string WspappEmailCC = ConfigurationManager.AppSettings["WspEmailCC"].ToString();
-        public string WfappEmailTos = ConfigurationManager.AppSettings["WfEmailTos"].ToString();
-        public string WfappEmailCC = ConfigurationManager.AppSettings["WfEmailCC"].ToString();
-        string EmailFrom;
-        List<String> EmailTos=new List<string>();
-        string Subject;
-        string Content;
-        string SmtpServer = "cloudmail.microsoft.com";
-        string EmailFromPwd = "Change!89";
-
-       
-
         public EmailHelper(string subject, string content)
         {
-            this.Subject = subject;
-            this.Content = content;
+
         }
 
-        public void SendEmail()
+
+        public static void SendEmail(List<NotifyTask> tasks)
         {
             try
             {
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient(this.SmtpServer);
-                if (this.EmailTos == null) return;
-                mail.From = new MailAddress(appEmailFrom);
-                string[] tos = appEmailTos.Split(',');
-                string[] CCs = appEmailCC.Split(',');
-                for (int i = 0; i < tos.Length; i++)
+                foreach (var task in tasks)
                 {
-                    mail.To.Add(tos[i]);
+                    MailMessage mail = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("cloudmail.microsoft.com");
+                    if (task.EmailTo.Count == 0) return;
+                    mail.From = new MailAddress(task.EmailFrom);
+
+                    foreach (var to in task.EmailTo)
+                    {
+                        mail.To.Add(to);
+                    }
+                    foreach (var cc in task.EmailCc)
+                    {
+                        mail.CC.Add(cc);
+                    }
+                    mail.Subject = task.Subject;
+                    mail.IsBodyHtml = true;
+
+                    string content = "New thread coming from " + task.Name + ":<br>";
+                    foreach (var lists in task.NotifyModel)
+                    {
+                        foreach (var thread in lists)
+                        {
+                            List<Thread> threads = thread.Value;
+                            foreach (var item in threads)
+                            {
+                                content += item.ThreadLink + "<br>";
+                            }
+                        }
+                    }
+                    mail.Body = content;
+                    //Attachment attachment = new Attachment(filename);
+                    //mail.Attachments.Add(attachment);
+                    //SmtpServer.Port = 25;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential(task.EmailFrom, "Change!89");
+                    //SmtpServer.UseDefaultCredentials = true;
+                    SmtpServer.EnableSsl = true;
+                    if (task.NotifyModel.Count != 0)
+                    {
+                        SmtpServer.Send(mail);
+                    }
+
                 }
-                for (int i = 0; i < CCs.Length; i++)
-                {
-                    mail.CC.Add(CCs[i]);
-                }
-                mail.Subject = this.Subject;
-                mail.IsBodyHtml = true;
-                mail.Body = this.Content;
-                //Attachment attachment = new Attachment(filename);
-                //mail.Attachments.Add(attachment);
-                //SmtpServer.Port = 25;
-                SmtpServer.Credentials = new System.Net.NetworkCredential(this.EmailFrom, this.EmailFromPwd);
-                //SmtpServer.UseDefaultCredentials = true;
-                SmtpServer.EnableSsl = true;
-                SmtpServer.Send(mail);
-            }
-            catch(Exception e) {
-                LogHelper.LogMessage(e.Message);
-            }
-        }
-        public void SendEmailCustom(string tostring,string CCstring)
-        {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient(this.SmtpServer);
-                if (this.EmailTos == null) return;
-                mail.From = new MailAddress(appEmailFrom);
-                string[] tos = tostring.Split(',');
-                string[] CCs = CCstring.Split(',');
-                for (int i = 0; i < tos.Length; i++)
-                {
-                    mail.To.Add(tos[i]);
-                }
-                for (int i = 0; i < CCs.Length; i++)
-                {
-                    mail.CC.Add(CCs[i]);
-                }
-                mail.Subject = this.Subject;
-                mail.IsBodyHtml = true;
-                mail.Body = this.Content;
-                //Attachment attachment = new Attachment(filename);
-                //mail.Attachments.Add(attachment);
-                //SmtpServer.Port = 25;
-                SmtpServer.Credentials = new System.Net.NetworkCredential(this.EmailFrom, this.EmailFromPwd);
-                //SmtpServer.UseDefaultCredentials = true;
-                SmtpServer.EnableSsl = true;
-                SmtpServer.Send(mail);
             }
             catch (Exception e)
             {

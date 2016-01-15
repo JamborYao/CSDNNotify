@@ -65,13 +65,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CSDNNotify.cs" />
     <Compile Include="Common\EmailHelper.cs" />
     <Compile Include="Common\Forum.cs" />
-    <Compile Include="Common\ThreadHandler.cs" />
     <Compile Include="Common\LogHelper.cs" />
     <Compile Include="Common\MSDNHelper.cs" />
     <Compile Include="Common\TxtHelper.cs" />
-    <Compile Include="Interface\ITxt.cs" />
+    <Compile Include="Common\XMLHelper.cs" />
+    <Compile Include="Model\NotifyTask.cs" />
     <Compile Include="Model\Thread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,9 +87,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="log.txt" />
-    <Content Include="Response.xml" />
-    <Content Include="temp.html" />
+    <Content Include="TaskConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interface\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

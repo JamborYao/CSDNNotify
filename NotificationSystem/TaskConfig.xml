@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Notification>
+  <DriveFolder>driveFolder</DriveFolder>
+  <Tasks>
+    <Task id="azure">
+      <Name>AzureMSDN</Name>
+      <Link>https://social.msdn.microsoft.com/Forums/zh-CN/home?forum=windowsazurezhchs&amp;filter=alltypes&amp;sort=firstpostdesc</Link>
+      <Subject>Forum new thread coming</Subject>
+      <From>CSDN-Forums@hotmail.com</From>
+      <To>v-jayao@microsoft.com</To>
+      <Cc>jierong21@microsoft.com,v-wax1212ia5@microsoft.com</Cc>
+      <TempFile>AzureDataTemp.txt</TempFile>
+    </Task>
+    <Task id="wsp">
+      <Name> WspMSDN</Name>
+      <Link>https://social.msdn.microsoft.com/Forums/en-US/home?forum=wspdev&amp;filter=alltypes&amp;sort=firstpostdesc,https://social.msdn.microsoft.com/Forums/en-US/home?forum=wspsupport&amp;filter=alltypes&amp;sort=firstpostdesc</Link>
+      <Subject>Forum new thread coming</Subject>
+      <From>CSDN-Forums@hotmail.com</From>
+      <To>v-xu1jzh@microsoft.com</To>
+      <Cc>v-yan1jxu@microsoft.com,v-wax1ia5@microsoft.com,v-jayao@microsoft.com</Cc>
+      <TempFile>WspDataTemp.txt</TempFile>
+    </Task>
+    <Task id="wf">
+      <Name>WfMSDN</Name>
+      <Link>https://social.msdn.microsoft.com/Forums/en-US/home?forum=wfprerelease&amp;filter=alltypes&amp;sort=firstpostdesc</Link>
+      <Subject>Forum new thread coming</Subject>
+      <From>CSDN-Forums@hotmail.com</From>
+      <To>v-zhan1wu@microsoft.com</To>
+      <Cc>v-ya1njxu@microsoft.com,v-wax1ia5@microsoft.com,v-jayao@microsoft.com</Cc>
+      <TempFile>WfDataTemp.txt</TempFile>
+    </Task>
+    <Task id="CSDN">
+      <Name>AzureCSDN</Name>
+      <Link>http://ask.csdn.net/azure,http://azure.csdn.net/m/zone/azure/ask</Link>
+      <Subject>Forum new thread coming</Subject>
+      <From>CSDN-Forums@hotmail.com</From>
+      <To>v-jayao@microsoft.com</To>
+      <Cc>jierong21@microsoft.com,v-wax1212ia5@microsoft.com</Cc>
+      <TempFile>CSDNDataTemp.txt</TempFile>
+    </Task>
+  </Tasks>
+</Notification>
