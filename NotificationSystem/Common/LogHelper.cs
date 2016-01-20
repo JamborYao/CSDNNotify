@@ -15,8 +15,10 @@ namespace NotificationSystem.Common
             string filename = AppDomain.CurrentDomain.BaseDirectory + "log.txt";
             using (FileStream stream = File.Open(filename, FileMode.Append, FileAccess.Write, FileShare.None))   
             {
-                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(message);     
-                stream.Write(bytes, 0, bytes.Length); 
+                string messageWithDate = DateTime.Now.ToString() + message+"\r\n";
+                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(messageWithDate);     
+                stream.Write(bytes, 0, bytes.Length);
+                
             }
 
         }

@@ -21,6 +21,31 @@ namespace NotificationSystem
             XMLHelper.GetModel();
             CSDNNotify.GetModel();
 
+            //MailMessage mail = new MailMessage();
+            ////SmtpClient SmtpServer = new SmtpClient("cloudmail.microsoft.com");
+            //SmtpClient SmtpServer = new SmtpClient("smtp.live.com",587);
+            //mail.From = new MailAddress("CSDN-Forums@hotmail.com");
+
+
+            //    mail.To.Add("v-jayao@microsoft.com");
+
+
+            //mail.Subject = "test";
+            //mail.IsBodyHtml = true;
+
+            //string content = "New thread coming from " + "task.Name" + ":<br>";
+
+            //mail.Body = content;
+            ////Attachment attachment = new Attachment(filename);
+            ////mail.Attachments.Add(attachment);
+            ////SmtpServer.Port = 25;
+            //SmtpServer.Credentials = new System.Net.NetworkCredential("CSDN-Forums@hotmail.com", "Change!89");
+            ////SmtpServer.UseDefaultCredentials = false;
+            //SmtpServer.EnableSsl = true;
+
+            //SmtpServer.Send(mail);
+
+
         }
 
     }
